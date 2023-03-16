@@ -13,11 +13,12 @@
   "reviewersFromCodeOwners": true,
   "schedule": ["after 10pm and before 4am every weekday", "every weekend"],
   "automergeSchedule": ["after 10pm and before 5am every weekday", "every weekend"],
+  "platformAutomerge": true,
   "packageRules": [
     {
+      "description": "Automerge non-major updates",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true,
-      "platformAutomerge": true
+      "automerge": true
     }
   ]
 }
