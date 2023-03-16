@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":timezone(Asia/Tokyo)",
+  ],
+  "assigneesFromCodeOwners": true,
+  "configMigration": true,
+  "labels": ["dependencies"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 5,
+  "branchConcurrentLimit": 5,
+  "reviewersFromCodeOwners": true,
+  "schedule": ["after 10pm and before 4am every weekday", "every weekend"],
+  "automergeSchedule": ["after 10pm and before 5am every weekday", "every weekend"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "platformAutomerge": true
+    }
+  ]
+}
