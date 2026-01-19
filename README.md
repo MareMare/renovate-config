@@ -9,8 +9,9 @@ Renovate 設定の共有プリセットです。
 共有プリセット `default.json` を使用する他のリポジトリでは `renovate.json` を以下のようにします。
 ```json
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>MareMare/renovate-config"
+    "local>MareMare/renovate-config"
   ]
 }
 ```
